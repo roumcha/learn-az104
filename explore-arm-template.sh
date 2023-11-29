@@ -1,3 +1,5 @@
+# 解説
+
 az login
 
 rgName="ARMテンプレートの練習"
@@ -6,5 +8,7 @@ location="japanwest"
 templateFile="./explore-arm-template.json"
 
 az group create --name $rgName --location $location
-
-az deployment group create --name $deploymentName --resource-group $rgName --template-file $templateFile
+az deployment group create \
+    --name $deploymentName \
+    --resource-group $rgName \
+    --template-file $templateFile
